@@ -1,7 +1,16 @@
-function support() {
+
+
+function Support() {
+
+
+
     return (
-        <h1>support page</h1>
+        <div>
+            <h1>support page</h1>
+
+        </div>
+
     )
 }
 
-export default support;
+export default Support;

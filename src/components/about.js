@@ -7,10 +7,15 @@ function About() {
         navigate("/support");
 
     }
+
+    function bachHandler() {
+        navigate(-1);
+    }
     return (
         <div>
             <h1>about page</h1>
             <button onClick={clickHandler}>move to support page</button>
+            <button onClick={bachHandler}>Go Back</button>
         </div>
 
 
