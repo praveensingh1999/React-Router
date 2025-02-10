@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import HOME from './components/home';
 import SUPOORT from './components/support';
 import ABOUT from './components/about';
@@ -30,11 +30,12 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<HOME />} />
-        <Route path="/support" element={<SUPOORT />} />
-        <Route path="/about" element={<ABOUT />} />
-        <Route path="/labs" element={<LABS />} />
-        <Route path="*" element={<NOTFOUND />} />
+        <Route path="/" element={<HOME />} >
+          <Route path="/support" element={<SUPOORT />} />
+          <Route path="/about" element={<ABOUT />} />
+          <Route path="/labs" element={<LABS />} />
+          <Route path="*" element={<NOTFOUND />} />
+        </Route>
       </Routes>
     </div>
   );
