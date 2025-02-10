@@ -7,6 +7,7 @@ import ABOUT from './components/about';
 import LABS from './components/labs';
 import NOTFOUND from './components/notfound.js'
 import { NavLink } from 'react-router-dom';
+import MainHeader from './components/mainheader.js';
 function App() {
   return (
     <div className="App">
@@ -30,7 +31,8 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<HOME />} >
+        <Route path="/" element={<MainHeader />} >
+          <Route index element={<HOME />} />
           <Route path="/support" element={<SUPOORT />} />
           <Route path="/about" element={<ABOUT />} />
           <Route path="/labs" element={<LABS />} />
